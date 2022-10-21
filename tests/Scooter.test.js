@@ -71,7 +71,7 @@ describe('Testing the dock method', () =>{
 })
 
 describe('Testing the recharge() method', () => {
-  test("charge", async () => {
+  test("recharge() method testing", async () => {
     const rechargeScooter = new Scooter();
     await rechargeScooter.recharge(); // we need to wait for the charge!
     expect(rechargeScooter.charge).toBe(100);
@@ -79,7 +79,7 @@ describe('Testing the recharge() method', () => {
 })
 
 describe('Testing the requestRepair() method', () => {
-   test("charge", async () => {
+   test("repairRecharge() method testing", async () => {
      const repairScooter = new Scooter();
      await repairScooter.requestRepair(); // we need to wait for the charge!
      expect(repairScooter.isBroken).toBe(false);
