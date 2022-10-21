@@ -4,15 +4,17 @@ const ScooterApp = require('../src/ScooterApp')
 
 // ScooterApp tests here
 describe('Testing the register(user) method', () => {
+    // Initialising a new scooter class
     const registerScooterApp = new ScooterApp()
     const userScooterApp = new User('IhsanIsGr8', 'PsswrdGoBrr', 20)
+    //Passing it to the register method twice to see if the user was registered
     registerScooterApp.register(userScooterApp)
     const result = registerScooterApp.register(userScooterApp)
-
     test('testing if its in registeredUser', () =>{
         expect(result).toEqual("Already registered!");
     })
 
+    //Creating a new user isntance with a low age
     const errorUser = new User('Milly', 'Haha', 14)
     const errorResult = registerScooterApp.register(errorUser)
     test('testing is error message is thrown if age is > than 17', () =>{
@@ -37,7 +39,7 @@ describe('Testing the register(user) method', () => {
 })
 
 describe('Testing the logIn(username, password) method', () =>{
-    
+
 })
 
 // add scooter

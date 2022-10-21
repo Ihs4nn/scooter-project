@@ -35,7 +35,16 @@ class ScooterApp {
 
   logIn(username, password){
     for(let i = 0; i < this.registeredUsers.length; i++){
-      if()
+      if(this.registeredUsers[i.username] === username && this.registeredUsers[i.password] === password){
+        this.registeredUsers[i.loggedIn] = true
+        console.log("Welcome back user! You're all logged in.")
+        return "Welcome back user! You're all logged in."
+      }
+      else{
+        console.log("Username or password is incorrect. :( ");
+        return "Username or password is incorrect. :( "
+      }
+
     }
   }
 
