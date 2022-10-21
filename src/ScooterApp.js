@@ -56,17 +56,19 @@ class ScooterApp {
 
   removeScooter(scooterToRemove){
     for( let i in this.stations){
-      if(this.stations[i].serial === scooterToRemove.serial){
-        this.stations[i].splice(this.stations[i].indexOf(scooterToRemove), 1)
-        console.log("Station removed!");
+      let index = this.stations[i].indexOf(scooterToRemove)
+      if(this.stations[i][index].serial === scooterToRemove.serial){
+        this.stations[i].splice(index, 1)
         return "Station removed!"
       }
-      else if(this.stations[i].serial !== scooterToRemove.serial){
+      else if(this.stations[i].serial !== scooterToRemove){
         console.log("Station cannot be found!");
-        return "Station cannt be found"
+        return "Station cannot be found"
       }
     }
   }
+
+  
 
 
 
