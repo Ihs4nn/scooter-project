@@ -5,7 +5,9 @@
   "main": "Application.js",
   "scripts": {
     "test": "jest --watch-all --verbose",
-    "test:coverage": "jest --verbose --collect-coverage"
+    "test:coverage": "jest --verbose --collect-coverage",
+    "test:scooterapp": "jest ./tests/ScooterApp --verbose",
+    "test:scooter": "jest ./tests/Scooter --verbose"
   },
   "repository": {
     "type": "git",
