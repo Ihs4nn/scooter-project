@@ -67,7 +67,13 @@ describe('Testing the addScooter() method', () =>{
 })
 
 describe('Testing the removeScooter() method', () => {
+    const removeScooterApp = new ScooterApp();
+    const newUser = new User('IhsanIsGr8', 'PsswrdGoBrr', 20)
+    const newScooter = new Scooter('Manhattan', newUser)
+    removeScooterApp.addScooter('Manhattan', newScooter)
 
+    const result = removeScooterApp.removeScooter(newScooter);
+    expect(result).toEqual("Station removed!")
 })
 
 // remove scooter
