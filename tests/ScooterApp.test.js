@@ -20,10 +20,11 @@ describe('Testing the register(user) method', () => {
     test('testing is error message is thrown if age is > than 17', () =>{
         expect(errorResult).toEqual("Too young to register!");
     })
+
     test('testing if user.password has been passed in correctly', () => {
         expect(registerScooterApp.registeredUsers.IhsanIsGr8.password).toEqual(userScooterApp.password)   
     })
-    
+
     test('testing if user.age has been passed in correctly', () => {
         expect(registerScooterApp.registeredUsers.IhsanIsGr8.age).toEqual(userScooterApp.age)
     })
@@ -35,11 +36,18 @@ describe('Testing the register(user) method', () => {
     test('testing if user.accountChange is 0', () =>{
         expect(registerScooterApp.registeredUsers.IhsanIsGr8.accountChange).toEqual(0)
     })
-    
+
 })
 
 describe('Testing the logIn(username, password) method', () =>{
+    const logInScooterApp = new ScooterApp()
+    const logInUser = new User('IhsanIsGr8', 'PsswrdGoBrr', 20)
+    logInScooterApp.register(logInUser);
 
+    const result = logInScooterApp.logIn('IhsanIsGr8', 'PsswrdGoBrr')
+    test('testing if it successfully logs in new users', () =>{
+        expect(result).toEqual("Welcome back user! You're all logged in.")
+    })
 })
 
 // add scooter
