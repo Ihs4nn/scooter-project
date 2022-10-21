@@ -48,6 +48,12 @@ describe('Testing the logIn(username, password) method', () =>{
     test('testing if it successfully logs in new users', () =>{
         expect(result).toEqual("Welcome back user! You're all logged in.")
     })
+
+
+    const errorResult = logInScooterApp.logIn('IhsanIsGr8', 'wrongPsswrd')
+    test('testing if it states the login was unsuccessful', () =>{
+        expect(errorResult).toEqual("Username or password is incorrect. :(")
+    })
 })
 
 // add scooter

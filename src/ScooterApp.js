@@ -6,7 +6,7 @@ class ScooterApp {
 
   constructor(){
 
-    this.stations = { "Manhattan": [], "Brooklyn": [], "Queens": [], "Bronx": [], "Statenisland": [] }
+    this.stations = { Manhattan: [], Brooklyn: [], Queens: [], Bronx: [], Statenisland: [] }
     this.registeredUsers = {};
     ScooterApp.scooterSessions.push(ScooterApp)
 
@@ -33,18 +33,24 @@ class ScooterApp {
     return "User has been registered"
   }
 
+
   logIn(username, password){
-    for(let i = 0; i < this.registeredUsers.length; i++){
-      if(this.registeredUsers[i.username] === username && this.registeredUsers[i.password] === password){
-        this.registeredUsers[i.loggedIn] = true
+    if(Object.keys(this.registeredUsers).includes(username)){
+      if(this.registeredUsers[username].password === password){
         console.log("Welcome back user! You're all logged in.")
         return "Welcome back user! You're all logged in."
       }
-      else{
-        console.log("Username or password is incorrect. :( ");
-        return "Username or password is incorrect. :( "
-      }
+    }
+    console.log("Username or password is incorrect. :(");
+    return "Username or password is incorrect. :("
+  }
 
+  addScooter(location, scooter){
+    for(let i in this.stations){
+      if (i === location){
+        scooter.station = location
+        this.stations[i] = scooter
+      }
     }
   }
 
