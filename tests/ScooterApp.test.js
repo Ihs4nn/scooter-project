@@ -61,11 +61,13 @@ describe('Testing the addScooter() method', () =>{
     const newScooter = new Scooter('Manhattan', newUser)
     addScooterApp.addScooter('Manhattan', newScooter)
 
-    test('testing if the scooters property is inside correct location', () =>{
+    test('testing if the scooters property is inside correct locationgi', () =>{
         expect(addScooterApp.stations.Manhattan.includes(newScooter)).toBe(true);
     })
 })
 
-// add scooter
+describe('Testing the removeScooter() method', () => {
+    
+})
 
 // remove scooter

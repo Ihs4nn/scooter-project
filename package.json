@@ -7,7 +7,8 @@
     "test": "jest --watch-all --verbose",
     "test:coverage": "jest --verbose --collect-coverage",
     "test:scooterapp": "jest ./tests/ScooterApp --verbose",
-    "test:scooter": "jest ./tests/Scooter --verbose"
+    "test:scooter": "jest ./tests/Scooter --verbose",
+    "test:user": "jest ./tests/User --verbose"
   },
   "repository": {
     "type": "git",
