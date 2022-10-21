@@ -49,10 +49,20 @@ describe('Testing the logIn(username, password) method', () =>{
         expect(result).toEqual("Welcome back user! You're all logged in.")
     })
 
-
     const errorResult = logInScooterApp.logIn('IhsanIsGr8', 'wrongPsswrd')
     test('testing if it states the login was unsuccessful', () =>{
         expect(errorResult).toEqual("Username or password is incorrect. :(")
+    })
+})
+
+describe('Testing the addScooter() method', () =>{
+    const addScooterApp = new ScooterApp();
+    const newUser = new User('IhsanIsGr8', 'PsswrdGoBrr', 20)
+    const newScooter = new Scooter('Manhattan', newUser)
+    addScooterApp.addScooter('Manhattan', newScooter)
+
+    test('testing if the scooters property is inside correct location', () =>{
+        expect(addScooterApp.stations.Manhattan.includes(newScooter)).toBe(true);
     })
 })
 

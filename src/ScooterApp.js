@@ -49,10 +49,12 @@ class ScooterApp {
     for(let i in this.stations){
       if (i === location){
         scooter.station = location
-        this.stations[i] = scooter
+        this.stations[i].push(scooter)
       }
     }
   }
+
+
 
 
 }

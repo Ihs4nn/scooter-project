@@ -24,8 +24,6 @@ describe('tests the scooter Object', () => {
 
 })
 
-
-
  //Rent() Method tests
 describe('Testing the rent method', () => {
   //new constructor for the method
