@@ -33,6 +33,12 @@ class ScooterApp {
     return "User has been registered"
   }
 
+  logIn(username, password){
+    for(let i = 0; i < this.registeredUsers.length; i++){
+      if()
+    }
+  }
+
 
 }
 

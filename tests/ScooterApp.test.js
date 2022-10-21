@@ -36,7 +36,9 @@ describe('Testing the register(user) method', () => {
     
 })
 
-// log in
+describe('Testing the logIn(username, password) method', () =>{
+    
+})
 
 // add scooter
 
